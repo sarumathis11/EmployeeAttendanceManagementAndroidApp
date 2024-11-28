@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "294140722773",
+    "firebase_url": "https://login-12ba8-default-rtdb.firebaseio.com",
+    "project_id": "login-12ba8",
+    "storage_bucket": "login-12ba8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294140722773:android:e33f071e77c1eeebfc5edc",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC87QeL36CX7erxbv14tb8_HTSX4tq6H7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

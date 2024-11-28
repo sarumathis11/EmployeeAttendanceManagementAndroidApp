@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
+}
+
+android {
+    namespace 'com.example.myapplication'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.md'  // Exclude the duplicate NOTICE.md files
+        exclude 'META-INF/LICENSE.md'  // Exclude duplicate LICENSE.md
+    }
+}
+
+dependencies {
+
+    implementation platform('com.google.firebase:firebase-bom:32.2.3') // Firebase BoM (Bill of Materials)
+
+    // Add Firebase dependencies as needed
+    implementation 'com.google.firebase:firebase-database'   // Realtime Database
+    implementation 'com.google.firebase:firebase-firestore'  // Firestore (optional)
+    implementation 'com.google.firebase:firebase-auth'       // Authentication (optional)
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.sun.mail:android-mail:1.6.7'
+    implementation 'com.sun.mail:android-activation:1.6.7'
+
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+}
+apply plugin: 'com.google.gms.google-services'
