@@ -36,7 +36,11 @@ android {
 dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:32.2.3') // Firebase BoM (Bill of Materials)
+    // Lottie (animation)
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    // (keep existing Firebase deps you already have)
 
+    
     // Add Firebase dependencies as needed
     implementation 'com.google.firebase:firebase-database'   // Realtime Database
     implementation 'com.google.firebase:firebase-firestore'  // Firestore (optional)

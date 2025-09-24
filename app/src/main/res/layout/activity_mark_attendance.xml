@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
-
-
+    android:padding="16dp"
+    tools:context=".MarkAttendanceActivity">
 
     <!-- Name EditText -->
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter user Name"
+        android:hint="Enter User Name"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
 
-    <!-- Latitude EditText -->
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="0dp"
@@ -26,10 +28,9 @@
         app:layout_constraintTop_toBottomOf="@id/usernameEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="16dp"/>
 
-
-    <!-- Date Button -->
+    <!-- Fetch Location Button -->
     <Button
         android:id="@+id/locationButton"
         android:layout_width="wrap_content"
@@ -38,22 +39,23 @@
         app:layout_constraintTop_toBottomOf="@id/passwordEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"/>
 
+    <!-- Location TextView -->
     <TextView
         android:id="@+id/locationTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
         android:text="Location will be displayed here"
         android:textSize="16sp"
         android:textColor="@android:color/black"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/locationButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
-    <!-- Save Button -->
+    <!-- Save Attendance Button -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
@@ -62,6 +64,20 @@
         app:layout_constraintTop_toBottomOf="@id/locationTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"/>
+
+    <!-- Lottie Success Animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSuccess"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/success_check"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
